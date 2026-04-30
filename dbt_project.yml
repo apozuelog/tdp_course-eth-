@@ -45,7 +45,6 @@ models:
             select: ['BA']  
 
 seeds:
-  +database: seeds
   +schema: static
 
 vars:
