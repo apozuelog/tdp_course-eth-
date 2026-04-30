@@ -34,6 +34,16 @@ models:
         - report
       +schema: marts
 
+      analytics:
+        stablecoin_activity_per_day:
+          +post-hook:
+            - GRANT USAGE ON DATABASE DBT TO ROLE TESTER;
+            - GRANT USAGE ON SCHEMA DBT.YOUR_SCHEMA TO ROLE TESTER;
+            - GRANT USAGE ON DATABASE DBT TO ROLE BA;
+            - GRANT USAGE ON SCHEMA DBT.YOUR_SCHEMA TO ROLE BA;
+          +grants:
+            select: ['BA']  
+
 seeds:
   +database: seeds
   +schema: static
