@@ -1,1 +1,7 @@
 {{ codegen.generate_model_yaml(['stg_transactions', 'stg_transactions_enriched', 'stablecoin_activity_per_day']) }}
+
+{{ target.name }}
+
+{{ target.database }}
+
+{{ target.schema }}
